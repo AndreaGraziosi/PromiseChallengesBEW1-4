@@ -68,7 +68,7 @@ function uppercaser(str) {
  * @param {*} str The string to space
  */
 function spacer(str) {
-  return new Promise(function(resolve, reject){
+  return new Promise(function(resolve, reject) {
     setTimeout(function() {
     if (typeof str === 'string') {
       resolve(str.split("").join(" "));
@@ -84,7 +84,8 @@ function spacer(str) {
 async function greetAndUppercase(name) {
     greeting = await greet(name)
     uppercasedGreeting = await uppercaser(greeting)
-    return uppercasedGreeting
+    spacedOut = await spacer(uppercasedGreeting)
+    return spacedOut
 }
 
 
