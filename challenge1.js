@@ -5,15 +5,17 @@
  * 
  * 1. Read over the code that follows. In what order will the outputs "Step 1",
  *    "Step 2", and "Step 3" be printed? How do you know?
- * 
+ * Step 1 Step 2 and Step 3. Because the program will read line by line and print the 
+ * corresponding line
  * 
  * 2. Run this code using `node challenge1.js`. In what order were the steps
  *    printed?
- * 
+ * Step 1, 3 and 2!
  * 
  * 3. Change the delay time in the `snooze` function from 2000 ms to 0. In what
  *    order will the steps be printed now? Why? Re-run the code again to verify
  *    your expectation. Were you correct?
+ * still the same order! my expectation was that step 2 would print first but it did not!
  * 
  *******************************************************************************
  */
@@ -22,7 +24,7 @@
 function snooze(action) {
     setTimeout(function() {
       action();
-    }, 2000);
+    }, 0);
 }
 console.log('Step 1');
 
