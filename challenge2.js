@@ -75,17 +75,18 @@ function spacer(str) {
      setTimeout(function() {
      if (typeof str === 'string') {
        resolve(str.split("").join(" "));
+       
      } else {
       reject('Argument to spacer must be a string');
   }
-  }, 1500);
+  }, 1000);
 
      });
 }
    
 
 name = 'Andrea'
-my_str = 'Make School is awesome'
+my_str = 'Make School is awesome!'
 my_spacer = 'Love'
 
 
@@ -96,6 +97,7 @@ greet(name)
     })
     .then((uppercaserResult) => {
         console.log(uppercaserResult)
+        return spacer(my_spacer);
     })
     .then((spacerResult) => {
         console.log(spacerResult)
